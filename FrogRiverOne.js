@@ -1,5 +1,5 @@
-Count minimal number of jumps from position X to Y.
-https://app.codility.com/programmers/lessons/3-time_complexity/frog_jmp/
+Find the earliest time when a frog can jump to the other side of a river.
+https://app.codility.com/programmers/lessons/4-counting_elements/frog_river_one/
 
 function solution(X, A) {
     // write your code in JavaScript (Node.js 8.9.4)
