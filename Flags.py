@@ -9,13 +9,23 @@ def solution(A):
         if A[i-1] < A[i] and A[i] > A[i+1]:
             peak.append(i)
         
-    number_of_flags = len(peak)
-    distance = peak[-1] - peak[0] + 1
+    maxflag = math.ceil(math.sqrt(peak[-1] - peak[0])) 
+    flagplaced = 2
     
-    while number_of_flags > 0:
-        if distance / number_of_flags < number_of_flags:
-            number_of_flags -= 1
-        else:
-            break
+    for i in range(maxflag, -1, -1):
     
-    return number_of_flags
+        startindex = 0
+        endindex = len(peak)-1
+        startflag = peak[startindex]
+        endflag = peak[endindex]
+        
+        while startindex < endindex:
+            startindex += 1
+            endindex -= 1
+            if startindex + maxflag <= peak[startindex]:
+                if startindex + maxflag < endindex - maxflag:
+                    flagplaced += 1
+                    startflag = peak[startindex+1]
+                    
+            if 
+    
